@@ -13,4 +13,13 @@
         <a href="#/friend/delete/1">Delete friend</a>
         </div>
         </section>
+        <section>
+            <form>
+                <div><label for="name">Name</label></div>
+                <div><input id="name" type="text" ng-model="friend.name"></div>
+                <div><label for="number">Number</label></div>
+                <div><input id="number" type="text" ng-model="friend.number"></div>
+                <input type="button" value="Save new Friend" ng-click="save()">
+            </form>
+        </section>
     </div>

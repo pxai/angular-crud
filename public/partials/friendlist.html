@@ -14,4 +14,19 @@
 
         </div>
         </section>
+        <section>
+            <h3>Friends</h3>
+         <div ng-repeat="friend in friends">
+            <div>
+                <div><b>{{friend.name}}</b></div> 
+                <div>{{friend.number}}</div>
+                <div>
+                    <a href="#/friend/detail/{{friend.id}}">Detail</a> | 
+                    <a href="#/friend/update/{{friend.id}}">Update</a> | 
+                    <a href="#/friend/delete/{{friend.id}}">Delete</a>
+                </div>
+            </div>
+            <!--span><img src="img/players/players{{team.getId()}}.jpg" class="img-thumbnail"></span --> 
+        </div>
+        </section>
     </div>

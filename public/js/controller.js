@@ -34,23 +34,36 @@ angular.module('classApp.home', ['ngRoute'])
 }])
 
 .controller('HomeCtrl', [function() {
-
+        console.log('yeah babe');
 }])
 .controller('AboutCtrl', [function() {
 
 }])
-.controller('FriendListCtrl', [function() {
-
+.controller('FriendListCtrl', ['$scope','Friends',function($scope,Friends) {
+       $scope.friends = Friends.getAll();
 }])
-.controller('FriendDetailCtrl', [function() {
-
+.controller('FriendDetailCtrl', ['$scope','$routeParams','Friends',function($scope,$routeParams,Friends) {
+        $scope.friend = Friends.get({id:$routeParams.id});
 }])
-.controller('FriendNewCtrl', [function() {
-
+.controller('FriendNewCtrl', ['$scope','$location', 'Friends' ,function($scope, $location, Friends) {
+        $scope.save = function () {
+          console.log('Saving friend');
+          console.log($scope.friend);  
+          Friends.save($scope.friend);
+          $location.path('/friend/list');
+        };
 }])
-.controller('FriendUpdateCtrl', [function() {
+.controller('FriendUpdateCtrl', ['$scope', '$location', '$routeParams','Friends', function($scope,$location,$routeParams,Friends) {
+        $scope.friend = Friends.get({id:$routeParams.id});
 
+        $scope.update = function () {
+          console.log('Updating friend');
+          console.log($scope.friend);  
+          Friends.update($scope.friend);
+          $location.path('/friend/list');
+        };
 }])
-.controller('FriendDeleteCtrl', [function() {
-
+.controller('FriendDeleteCtrl', ['$scope', '$location', '$routeParams','Friends', function($scope,$location,$routeParams,Friends) {
+        $scope.friend = Friends.delete({id:$routeParams.id});
+        $location.path('/friend/list');
 }]);

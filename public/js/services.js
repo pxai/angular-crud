@@ -8,16 +8,57 @@
 
 var module = angular.module('classAppServices', ['ngResource']);
 
-module.factory('CreditCard', ['$http', function ($http) {
+module.factory('Friends', ['$http', function ($http) {
         var baseUrl = '/user/123/card';
-        return {
-            get: function (cardId) {
-                return $http.get(baseUrl + '/' + cardId);
-            },
-            save: function (card) {
-                var url = card.id ? baseUrl + '/' + card.id : baseUrl;
-                return $http.post(url, card);
+        var friends = [ {id:1, name: "Juan" , number: 666} , {id: 2, name: "Merlin" , number: 777} ];
 
+        return {
+            getAll: function () {
+                //return $http.get(baseUrl + '/' + cardId);
+                return friends;
+            },
+            get: function (friend) {
+                //return $http.get(baseUrl + '/' + cardId);
+                console.log('Received id:');
+                console.log(friend.id);
+                for (var i=0;i<friends.length;i++) {
+                    if (friends[i].id == friend.id) {
+                        return friends[i];
+                    }
+                }
+                return -1;
+            },
+            delete: function (friend) {
+                //return $http.get(baseUrl + '/' + cardId);
+                console.log('Received id:');
+                console.log(friend.id);
+                for (var i=0;i<friends.length;i++) {
+                    if (friends[i].id == friend.id) {
+                        friends.splice(i, 1);
+                        return;
+                    }
+                }
+                return {};
+            },
+            save: function (user) {
+                user.id = friends.length + 1;
+                friends.push(user);
+                return friends;
+                //var url = card.id ? baseUrl + '/' + card.id : baseUrl;
+                //return $http.post(url, card);
+
+            },
+            update: function (friend) {
+                //return $http.get(baseUrl + '/' + cardId);
+                console.log('updating id:');
+                console.log(friend.id);
+                for (var i=0;i<friends.length;i++) {
+                    if (friends[i].id == friend.id) {
+                        friends[i] = friend;
+                        return;
+                    }
+                }
+                return {};
             },
             query: function () {
                 return $http.get(baseUrl);
