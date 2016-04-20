@@ -3,9 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
-
-
 var module = angular.module('classAppServices', ['ngResource']);
 
 module.factory('Friends', ['$http', function ($http) {
