@@ -2,13 +2,16 @@
   "name": "angular-crud",
   "version": "1.0.0",
   "keywords": [
+     "angular",
+	"v1",
+	"crud",
     "util",
     "functional",
     "server",
     "client",
     "browser"
   ],
-  "author": "user",
+  "author": "Pello Altadill",
   "contributors": [],
   "dependencies": {
     "angular": "^1.5.0",
