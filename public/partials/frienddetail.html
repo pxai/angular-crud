@@ -1,24 +1,13 @@
 <div ng-controller="FriendDetailCtrl">  
         <section>
-        <h2>Friend Detail</h2>
+        <h2 id="title">Friend Detail</h2>
      
-        <p>Friend Detail</p>
-        <div>
-        <a href="#/friend/list">Friend list</a> | 
-        <a href="#/friend/detail/1">Friend detail</a> |
-        <a href="#/friend/new">New friend</a> |
-        <a href="#/friend/update/1">Friend update</a> |
-        <a href="#/friend/delete/1">Delete friend</a>
-
-        </div>
-        </section>
-      <section>
-            <h3>Friend detail {{friend.name}}</h3>
+        <p>Friend Detail  {{friend.name}}</p>
          <div>
-            <div>
-                <div><b>{{friend.name}}</b></div> 
-                <div><b>{{friend.id}}</b></div> 
-                <div>{{friend.number}}</div>
+            <div class="friend" id="friend{{friend.id}}">
+                <div class="friendname"><b>{{friend.name}}</b></div> 
+                <div class="friendid"><b>{{friend.id}}</b></div> 
+                <div class="friendnumber">{{friend.number}}</div>
                 <div>
                     <a href="#/friend/detail/{{friend.id}}">Detail</a> | 
                     <a href="#/friend/update/{{friend.id}}">Update</a> | 
