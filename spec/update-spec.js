@@ -17,10 +17,8 @@ describe('Angular v1 CRUD App tests', function() {
   it('should load a form', function() {
     expect(element.all(by.tagName('form')).count()).toBe(1);
     expect(element(by.css('form input#name[type="text"]')).isPresent()).toBe(true);
-    //expect(element(by.model('friend.name')).getText()).toEqual('Juan');
-//    expect(element(by.css('form input#number[value="666"]')).isPresent()).toBe(true);
-   // expect(element(by.model('friend.number'))).toEqual('666');
-   
+    expect(element(by.model('friend.name')).getAttribute('value')).toEqual('Juan');
+    expect(element(by.model('friend.number')).getAttribute('value')).toEqual('666');   
   });
   
   it('should write input, submit form and update correctly', function() {
