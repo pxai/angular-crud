@@ -28,7 +28,12 @@
     "webdriver-manager": "^10.0.2"
   },
   "devDependencies": {
+    "angular-animate": "^1.5.7",
+    "angular-mocks": "^1.5.7",
+    "jasmine": "^2.4.1",
     "karma": "^1.0.0",
-    "karma-firefox-launcher": "^1.0.0"
+    "karma-chrome-launcher": "^1.0.1",
+    "karma-firefox-launcher": "^1.0.0",
+    "karma-jasmine": "^1.0.2"
   }
 }

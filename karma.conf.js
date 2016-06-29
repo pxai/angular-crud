@@ -1,23 +1,23 @@
+//       '*!(.module|.spec).js',
+//      '!(node_modules)/**/*!(.module|.spec).js'
+
 module.exports = function(config) {
   config.set({
- basePath: './app',
-
+ basePath: '',
     files: [
-      'bower_components/angular/angular.js',
-      'bower_components/angular-animate/angular-animate.js',
-      'bower_components/angular-resource/angular-resource.js',
-      'bower_components/angular-route/angular-route.js',
-      'bower_components/angular-mocks/angular-mocks.js',
+      'node_modules/angular/angular.js',
+      'node_modules/angular-animate/angular-animate.js',
+      'node_modules/angular-resource/angular-resource.js',
+      'node_modules/angular-route/angular-route.js',
+      'node_modules/angular-mocks/angular-mocks.js',
       '**/*.module.js',
-      '*!(.module|.spec).js',
-      '!(bower_components)/**/*!(.module|.spec).js',
-      '**/*.spec.js'
+      'test/*.spec.js'
 ],
    autoWatch: true,
 
     frameworks: ['jasmine'],
 
-    browsers: ['Chrome', 'Firefox'],
+    browsers: ['Firefox'], //['Chrome','Firefox']
 
     plugins: [
       'karma-chrome-launcher',
