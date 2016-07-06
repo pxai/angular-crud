@@ -1,6 +1,7 @@
 /**
  * sample.js
  */
+
 describe('HomeCtrl', function() {
   beforeEach(module('classApp.home'));
 
@@ -13,12 +14,12 @@ describe('HomeCtrl', function() {
 
  describe('HomeCtrl testing', function() {
     it('works HomeCtrl', function() {
-      //var $scope = {};
-     // var controller = $controller('HomeCtrl', { $scope: $scope });
+      var $scope = {};
+    // var controller = $controller('HomeCtrl', { $scope: $scope });
       //$scope.password = 'longerthaneightchars';
       //$scope.grade();
      // expect($scope.strength).toEqual('strong');
-      //expect(true).toEqual(true);
+      expect(true).toBe(true);
     });
   });
 
