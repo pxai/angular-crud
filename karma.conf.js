@@ -3,16 +3,29 @@
 
 module.exports = function(config) {
   config.set({
- basePath: './public/js',
+ basePath: '',
+//    files: [
+//      'node_modules/angular/angular.js',
+//      'node_modules/angular-animate/angular-animate.js',
+//      'node_modules/angular-resource/angular-resource.js',
+//      'node_modules/angular-route/angular-route.js',
+//      'node_modules/angular-mocks/angular-mocks.js',
+//      '**/*.module.js',
+//      'test/*.spec.js',
+//      'controller.js',
+//      'services.js'
+//],
     files: [
-      'node_modules/angular/angular.js',
-      'node_modules/angular-animate/angular-animate.js',
-      'node_modules/angular-resource/angular-resource.js',
-      'node_modules/angular-route/angular-route.js',
-      'node_modules/angular-mocks/angular-mocks.js',
-      '**/*.module.js',
+        { pattern: 'node_modules/angular/angular.js', watched: false },
+        { pattern: 'node_modules/angular-resource/angular-resource.js', watched: false },
+        { pattern: 'node_modules/angular-route/angular-route.js', watched: false },
+        { pattern: 'node_modules/angular-mocks/angular-mocks.js', watched: false },
+      'public/js/app.js',
+      'public/js/controller.js',
+      'public/js/services.js',
+      //{pattern: 'test/unit/*.spec.js', watched: true, served: true, included: true}
       'test/*.spec.js'
-],
+     ],
    autoWatch: true,
 
     frameworks: ['jasmine'],

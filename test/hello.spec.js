@@ -3,7 +3,7 @@
  */
 
 describe('HomeCtrl', function() {
-  beforeEach(module('classApp.home'));
+  beforeEach(angular.module('classApp'));
 
   var $controller;
 
