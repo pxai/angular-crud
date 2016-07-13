@@ -26,4 +26,4 @@ In the conf.js set these lines:
 The second is required to locate the binary of
 phantomjs
 
-It Worked today.
+It Worked today, tomorrow.. who knows
