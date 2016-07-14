@@ -27,3 +27,8 @@ The second is required to locate the binary of
 phantomjs
 
 It Worked today, tomorrow.. who knows
+
+# See also:
+https://docs.npmjs.com/misc/scripts
+Headless testing:
+https://coderwall.com/p/1ny7nq/running-protractor-tests-with-a-headless-browser-on-travis-ci
