@@ -15,6 +15,7 @@
     "post-install": "./node_modules/.bin/webdriver-manager update",
     "start": "node_modules/.bin/http-server",
     "selenium": "./node_modules/.bin/webdriver-manager start",
+    "pretest": "./node_modules/.bin/webdriver-manager start && ./node_modules/.bin/http-server &",
     "test": "./node_modules/.bin/protractor conf.js"
   },
   "author": "Pello Altadill",
