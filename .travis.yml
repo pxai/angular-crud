@@ -9,3 +9,7 @@ before_script:
   - npm install -g jasmine
   - npm install -g protractor
   - npm install phantomjs
+  - npm run post-install
+  - npm run selenium & 
+  - npm run start &
+  - sleep 3
