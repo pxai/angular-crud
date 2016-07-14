@@ -28,6 +28,9 @@ phantomjs
 
 It Worked today, tomorrow.. who knows
 
+# Notes
+    //"pretest": "./node_modules/.bin/webdriver-manager update && ./node_modules/.bin/webdriver-manager start &; sleep 5 && echo OK ready && ./node_modules/.bin/http-server &",
+
 # See also:
 https://docs.npmjs.com/misc/scripts
 Headless testing:
