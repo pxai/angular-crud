@@ -1,4 +1,5 @@
 # Angular CRUD sample
+[![Build Status](https://travis-ci.org/pxai/angular-crud.svg?branch=master)](https://travis-ci.org/pxai/angular-crud)
 This is an angular v1 crud operations sample
 
 # Install
@@ -29,6 +30,7 @@ phantomjs
 It Worked today, tomorrow.. who knows
 
 # Notes
+ Moved this line to travis.yml, and now it works
     //"pretest": "./node_modules/.bin/webdriver-manager update && ./node_modules/.bin/webdriver-manager start &; sleep 5 && echo OK ready && ./node_modules/.bin/http-server &",
 
 # See also:
