@@ -10,3 +10,20 @@ npm install
 ```
 You could run it directly and locally in Firefox.
 Chrome support not yet.
+
+# phantomjs
+When you change to phantomjs, install
+```
+npm install --save-dev phantomjs
+```
+
+In the conf.js set these lines:
+```
+   browserName: 'phantomjs',
+   'phantomjs.binary.path': require('phantomjs').path,
+```
+
+The second is required to locate the binary of
+phantomjs
+
+It Worked today.
